@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5eAiUpQsd-V7CoIbemTajT2zC414m-vbWamLq_BiXBQ&s=10">
+
+    <style>
+        #display {
+    white-space: pre-line;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+    padding: 30px;
+
+    background:
+        radial-gradient(circle at top left, #ffd6e7, transparent 35%),
+        radial-gradient(circle at bottom right, #ff9fc5, transparent 35%),
+        linear-gradient(135deg, #fff5f9, #f7a8c4);
+
+    font-family: Georgia, serif;
+}
+
+#display {
+    width: 90%;
+    max-width: 850px;
+    padding: 40px 30px;
+
+    color: crimson;
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 1.9;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 1px;
+
+    white-space: pre-line;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(180, 50, 100, 0.18),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5);
+
+    text-shadow: 0 3px 15px rgba(120, 20, 60, 0.25);
+}
+
+#btn {
+    padding: 14px 38px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #ffffff;
+    color: #e94f87;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(180, 50, 100, 0.2);
+
+    transition: all 0.3s ease;
+}
+
+#btn:hover {
+    transform: translateY(-4px) scale(1.04);
+    background: #e94f87;
+    color: #ffffff;
+    box-shadow: 0 12px 30px rgba(180, 50, 100, 0.3);
+}
+
+#btn:active {
+    transform: scale(0.97);
+}
+    </style>
+</head>
+<body>
+    
+
+<h1 id="display"></h1>
+
+<button id="btn" onclick="oma ()">Click Me</button>
+
+
+
+
+
+<script>
+let display = document.querySelector('#display')
+let btn = document.querySelector('#btn')
+
+const text = `
+💞Raahon mein aayena..
+❤️‍🔥Mann se tera tazkara jaaye na...
+✨Tere siwa koi bhi bhaaye na
+💗Laagay nahi bin tere dil mera jaan e jaan
+💖 Meri yaadon mein tu,
+💕 Waadon mein tu hai, iraadon mein tu...
+❤️ Saare ke saare zamanay ko yoon,
+🥰 Mein ne bhulaya hai, tou meri sun le sada...
+
+`
+
+  let  index = 0;
+
+function oma (){
+  if(index < text.length){
+    display.innerHTML += text.charAt(index)
+    index++
+  }
+setTimeout(oma,80)
+}
+
+</script>
+</body>
+</html>
